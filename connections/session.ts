@@ -25,6 +25,7 @@ const prod = {
 
 
 
-export const store = Postgres<MyWizardSession>(env.MODE === 'dev' ? dev : prod);
+// export const store = Postgres<MyWizardSession>(env.MODE === 'dev' ? dev : prod); 
+export const store = undefined
 
 

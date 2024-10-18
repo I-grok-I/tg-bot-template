@@ -11,6 +11,7 @@ const dev = {
     password: env.DB_PASSWORD_DEV,
     database: env.DB_NAME_DEV,
 }
+
 const prod = {
     host: env.DB_HOST_PROD,
     port: Number(env.DB_PORT_PROD),
@@ -25,6 +26,6 @@ const prod = {
 
 const client = new Client(env.MODE === 'dev' ? dev : prod);
 
-client.connect().then(() => console.log('db client connected'))
+// client.connect().then(() => console.log('db client connected'))
 
 export const db = drizzle(client, {schema});
