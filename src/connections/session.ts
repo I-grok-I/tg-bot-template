@@ -1,8 +1,7 @@
 
-import { Postgres } from '@telegraf/session/pg'
 import { MyWizardSession } from '../types/interface';
 import * as env from './env'
-
+import {Postgres} from '@telegraf/session/pg'
 
 
 
@@ -25,7 +24,7 @@ const prod = {
 
 
 
-// export const store = Postgres<MyWizardSession>(env.MODE === 'dev' ? dev : prod); 
-export const store = undefined
+export const store = Postgres<MyWizardSession>(env.MODE === 'dev' ? dev : prod); 
+
 
 

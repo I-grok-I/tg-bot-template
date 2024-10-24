@@ -4,8 +4,6 @@ import { MyContext } from "../../types/interface";
 
 
 
-
-
 const firstStep = new Composer<MyContext>;
 firstStep.action('calcTwoNums', async ctx => {
     await ctx.deleteMessage()

@@ -3,10 +3,13 @@ import { MyContext } from "../types/interface";
 import {message} from 'telegraf/filters'
 
 
+export const sharedComposer = new Composer<MyContext>;
 
-export const exampleComposer = new Composer<MyContext>;
 
-exampleComposer.on(message('text'), async ctx => {
+
+
+
+sharedComposer.on(message('text'), async ctx => {
 
     return ctx.reply(
         `Хотите сложить 2 числа ?`,
@@ -20,6 +23,6 @@ exampleComposer.on(message('text'), async ctx => {
 
 })
 
-exampleComposer.action('calcTwoNums', async ctx => ctx.scene.enter('calcTwoNums'))
+sharedComposer.action('calcTwoNums', async ctx => ctx.scene.enter('calcTwoNums'))
 
-exampleComposer.action('deleteMessage', async ctx => ctx.deleteMessage())
+sharedComposer.action('deleteMessage', async ctx => ctx.deleteMessage())

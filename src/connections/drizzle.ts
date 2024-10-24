@@ -1,6 +1,6 @@
 import { drizzle } from "drizzle-orm/node-postgres";
 import { Client } from "pg";
-import * as schema from '../schema/schema'
+import * as schema from '../sharedPart/schema/schema'
 import * as env from '../connections/env'
 
 
@@ -26,6 +26,6 @@ const prod = {
 
 const client = new Client(env.MODE === 'dev' ? dev : prod);
 
-// client.connect().then(() => console.log('db client connected'))
+client.connect().then(() => console.log('drizzle client is connected.'))
 
 export const db = drizzle(client, {schema});
