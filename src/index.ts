@@ -4,6 +4,7 @@ import { bot } from './connections/token'
 import stage from './stage'
 import './connections/env'
 import { sharedComposer } from './sharedPart/handlers'
+import { usersComposer } from './usersPart/handlers'
 
 
 
@@ -22,6 +23,7 @@ bot.use(stage.middleware());
 
 
 // CONNECT APP PARTS
+bot.use(usersComposer)
 bot.use(sharedComposer)
 
 
