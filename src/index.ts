@@ -1,10 +1,10 @@
 import { session, Markup } from 'telegraf'
-import { store } from './connections/session'
-import { bot } from './connections/token'
+import { store } from './db/session'
+import { bot } from './token'
 import stage from './stage'
-import './connections/env'
-import { sharedComposer } from './sharedPart/handlers'
-import { usersComposer } from './usersPart/handlers'
+import './env'
+import { sharedComposer } from './sharedPart/composer'
+import { usersComposer } from './usersPart/composer'
 
 
 

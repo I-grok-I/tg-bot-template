@@ -1,5 +1,5 @@
 import { Telegraf } from 'telegraf'
-import { MyContext } from '../types/interface'
+import { MyContext } from './types/interface'
 import * as env from './env'
 
 

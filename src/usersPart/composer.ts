@@ -1,7 +1,7 @@
 import { Composer } from "telegraf"
 import { MyContext } from "../types/interface"
-import { db } from "../connections/drizzle";
-import { usersTable } from "./schema/schema";
+import { db } from "../db/drizzle";
+import { usersTable } from "../db/schema";
 import { eq } from "drizzle-orm";
 import { justOne } from "../sharedPart/utils";
 

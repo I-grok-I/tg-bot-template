@@ -1,7 +1,7 @@
 import { drizzle } from "drizzle-orm/node-postgres";
 import { Client } from "pg";
 import * as schema from '../sharedPart/schema/schema'
-import * as env from '../connections/env'
+import * as env from '../env'
 
 
 const dev = {
